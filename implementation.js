@@ -148,3 +148,8 @@ switch (arihmeticOperator) {
     console.log("Provide correct arithmetic operator");
     break;
 }
+
+/* 13.*  Використовуючи властивості рядків (тип string), та регулярний вираз (regular expression) видалити голосні букви зі слова. */
+
+let str = "JavaScript is awesome!";
+console.log(str.replace(/[aeio]/gi, ""));
