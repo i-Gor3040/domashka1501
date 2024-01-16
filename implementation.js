@@ -149,7 +149,94 @@ switch (arihmeticOperator) {
     break;
 }
 
+/* 8. Використовуючи цикл for перемістити значення від 1 до 5 у масив myArray. */
+let myArray = [];
+for (let i = 1; i <= 5; i++) {
+  myArray.push(i);
+}
+
+/* 9. Напишіть 2 цикли.
+   За допомогою першого передайте парні числа від 1 до 9 у myArray за допомогою циклу for.
+   За допомогою другого передайте непарні числа від 1 до 9 у myArray за допомогою циклу for. */
+let myArr1 = [];
+for (let i = 1; i < 10; i++) {
+  if (!(i % 2)) {
+    myArr1.push(i);
+  }
+}
+
+let myArr2 = [];
+for (let i = 1; i < 10; i++) {
+  if (i % 2) {
+    myArr2.push(i);
+  }
+}
+
+/* 10. Оголоcіть та ініціалізуйте змінну total = 0.
+    Використовуйте цикл for, щоб додати значення кожного елемента масиву myArr до підсумку.
+    const myArr = [2, 3, 4, 5, 6]; */
+
+let total = 0;
+const myArr = [2, 3, 4, 5, 6];
+for (let i = 0; i < myArr.length; i++) {
+    total +=myArr[i]
+}
+
+/* 11. Напишіть код, котрий виведе в консоль кожен піделемент в arr по одному.
+
+    const arr = [ [1, 2], [3, 4], [5, 6] ];
+
+    Console output:
+    1
+    2
+    3
+    4
+    5
+    6 */
+
+const arr3 = [ [1, 2], [3, 4], [5, 6] ];
+for (let i = 0; i < arr3.length; i++) {
+    for (let j = 0; j < arr3[i].length; j++) {
+        console.log(arr3[i][j]);
+    }
+}
+
+/* 12. Доповніть код нижче, так щоб в консоль повертався результат множення усіх чисел у підмасивах arr.
+    Використайте для цього вкладені цикли for.
+
+    Наприклад:
+    const arr = [[1], [2], [3]]  >  console.log(product) має повернути 6
+    const arr = [[1, 2], [3, 4], [5, 6, 7]]  >  console.log(product) має повернути 5040
+    const arr = [[5, 1], [0.2, 4, 0.5], [3, 9]]  >  console.log(product) має повернути 54
+
+    const arr = [[1, 2], [3, 4], [5, 6, 7]];
+
+    let product = 1;
+
+    // тут має бути ваше рішення
+
+    console.log(product); */
+
+    const arr7 = [[1, 2], [3, 4], [5, 6, 7]];
+
+    let product = 1;
+
+    for (let i = 0; i < arr7.length; i++) {
+        for (let j = 0; j < arr7[i].length; j++) {
+           product *= (arr7[i][j]);
+        }
+    }
+
+    console.log(product); 
+
 /* 13.*  Використовуючи властивості рядків (тип string), та регулярний вираз (regular expression) видалити голосні букви зі слова. */
 
 let str = "JavaScript is awesome!";
 console.log(str.replace(/[aeio]/gi, ""));
+
+/* 14.*  Використовуючи оператор if реалізувати логіку переводу метрів в кілометри,
+    так щоб в консоль виводився результат обчислень з правильним закінченням.
+    Наприклад: 1000 метрів це 1 кілометр;  32 метри це 0,032 кілометра і т.д.
+
+    Підказка(https://ukr-lifehacks.ed-era.com/rozdil-9/zvyazok_chislivnykiv)
+*/ 
